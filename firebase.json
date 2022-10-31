@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "portfolio-jcerdeira",
+    "public": "dist/frontend",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

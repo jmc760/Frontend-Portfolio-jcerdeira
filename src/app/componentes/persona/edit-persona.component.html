@@ -1,0 +1,47 @@
+<section>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" *ngIf="pers">
+        <div class="center">
+            <div class="form">
+                <!-- Foto de Perfil -->
+                <div class="custom-file-upload">
+                    <label for="imgP">
+                        <mat-icon color="primary" matTooltip="Seleccionar Foto de Perfil" matTooltipPosition="below">
+                            add_a_photo
+                        </mat-icon>
+                    </label>
+                    <input type="file" id="imgP" name="imgP" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <!-- Cuidado: Borré de input a [(ngModel)]="pers.imgP"-->
+                    <!--<div>
+                        <img [src]="sImage.url" width="200px">
+                    </div>-->
+                </div>
+                <!-- Nombre -->
+                <mat-form-field appearance="fill">
+                    <mat-label for="nombreP">Nombre de la persona.</mat-label>
+                    <input type="text" id="nombreP" name="nombreP" [(ngModel)]="pers.nombreP" required matInput>
+                </mat-form-field>
+                <!-- Puesto -->
+                <mat-form-field appearance="fill">
+                    <mat-label for="puestoP">Puesto.</mat-label>
+                    <input type="text" id="puestoP" name="puestoP" [(ngModel)]="pers.puestoP" matInput>
+                </mat-form-field>
+                <!-- Ubicación -->
+                <mat-form-field appearance="fill">
+                    <mat-label for="ubicacionP">Ubicación.</mat-label>
+                    <input type="text" id="ubicacionP" name="ubicacionP" [(ngModel)]="pers.ubicacionP" required
+                        matInput>
+                </mat-form-field>
+                <!-- Descripción -->
+                <mat-form-field appearance="fill">
+                    <mat-label for="descripciónP">Descripción.</mat-label>
+                    <textarea type="text" id="descripciónP" name="descripciónP" [(ngModel)]="pers.descripcionP" required
+                        matInput></textarea>
+                </mat-form-field>
+                <!-- Botón -->
+                <button mat-stroked-button color="accent">
+                    <mat-icon>create</mat-icon> Modificar Persona
+                </button>
+            </div>
+        </div>
+    </form>
+</section>

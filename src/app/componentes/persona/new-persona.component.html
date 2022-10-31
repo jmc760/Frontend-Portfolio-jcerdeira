@@ -1,0 +1,35 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    <div class="center">
+        <div class="form">
+            <!-- Foto de Perfil -->
+            <mat-form-field appearance="fill">
+                <mat-label for="imgP">Foto de Perfil</mat-label>
+                <input type="text" id="imgP" name="imgP" [(ngModel)]="imgP" required matInput>
+            </mat-form-field>
+            <!-- Nombre -->
+            <mat-form-field appearance="fill">
+                <mat-label for="nombreP">Nombre de la persona.</mat-label>
+                <input type="text" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required matInput>
+            </mat-form-field>
+            <!-- Puesto -->
+            <mat-form-field appearance="fill">
+                <mat-label for="puestoP">Puesto.</mat-label>
+                <input type="text" id="puestoP" name="puestoP" [(ngModel)]="puestoP" required matInput>
+            </mat-form-field>
+            <!-- Ubicación -->
+            <mat-form-field appearance="fill">
+                <mat-label for="ubicacionP">Ubicación.</mat-label>
+                <input type="text" id="ubicacionP" name="ubicacionP" [(ngModel)]="ubicacionP" required matInput>
+            </mat-form-field>
+            <!-- Descripción -->
+            <mat-form-field appearance="fill">
+                <mat-label for="descripciónP">Descripción.</mat-label>
+                <input type="text" id="descripciónP" name="descripciónP" [(ngModel)]="descripcionP" required matInput>
+            </mat-form-field>
+            <!-- Botón -->
+            <button mat-stroked-button color="accent">
+                <mat-icon>create</mat-icon> Agregar persona
+            </button>
+        </div>
+    </div>
+</form>

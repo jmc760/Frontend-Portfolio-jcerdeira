@@ -1,3 +1,7 @@
+section {
+  background-image: linear-gradient(to top right, #37BBED, #185D76) ;
+}
+
 .center {
   display: flex;
   justify-content: center;

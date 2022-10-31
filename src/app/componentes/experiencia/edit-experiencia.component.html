@@ -1,0 +1,32 @@
+<section>
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" *ngIf="expLab">
+        <div class="center">
+            <div class="form">
+                <!-- Imagen -->
+                <div class="custom-file-upload">
+                    <label for="imgE">
+                        <mat-icon color="primary" matTooltip="Seleccionar Imagen" matTooltipPosition="below">
+                            add_a_photo
+                        </mat-icon>
+                    </label>
+                    <input type="file" id="imgE" name="imgE" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                </div>
+                <!-- Nombre -->
+                <mat-form-field appearance="fill">
+                    <mat-label for="nombreE">Nombre de la Empresa.</mat-label>
+                    <input type="text" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required matInput>
+                </mat-form-field>
+                <!-- Descripción -->
+                <mat-form-field appearance="fill">
+                    <mat-label for="descripcionE">Descripción de la tarea.</mat-label>
+                    <input type="text" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required
+                        matInput>
+                </mat-form-field>
+                <!-- Botón -->
+                <button mat-stroked-button color="accent">
+                    <mat-icon>create</mat-icon> Modificar experiencia
+                </button>
+            </div>
+        </div>
+    </form>
+</section>

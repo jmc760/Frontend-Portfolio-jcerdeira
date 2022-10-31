@@ -1,4 +1,35 @@
 <section>
-    <h2>Educación</h2>
-    <app-item-educacion></app-item-educacion>
+    <p id="headline">Educación</p>
+    <div *ngFor="let Educacion of educacion">
+        <div class="row">
+            <!-- Imagen -->
+            <div class="item">
+                <img src={{Educacion.imgE}} id="imgE">
+            </div>
+            <!-- Nombre -->
+            <div class="item">
+                <p class="institucion">{{Educacion.nombreE}}</p>
+            </div>
+            <!-- Descripción -->
+            <div class="item">
+                <p>{{Educacion.descripcionE}}</p>
+            </div>
+            <!-- Botones -->
+            <div class="item">
+                <button mat-stroked-button color="accent" *ngIf="isLogged" routerLink="/editedu/{{Educacion.id}}">
+                    <mat-icon matTooltip="Editar" matTooltipPosition="below">create</mat-icon>
+                </button>
+                <button mat-stroked-button color="accent" *ngIf="isLogged" (click)="delete(Educacion.id)">
+                    <mat-icon matTooltip="Borrar" matTooltipPosition="below">delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Agregar Educación -->
+    <div>
+        <button mat-fab color="accent" type="button" class="add-button" routerLink="/nuevaedu"
+            *ngIf="isLogged">
+            <mat-icon matTooltip="Agregar Educación" matTooltipPosition="below">add</mat-icon>
+        </button>
+    </div>
 </section>

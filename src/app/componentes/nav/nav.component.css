@@ -1,28 +1,21 @@
-nav {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-}
-
 span {
-    flex: 1 1 auto;
-}
-
-.ap-logo {
-    height: 35px;
-    width: fit-content;
-    margin-left: 1em;
-}
-
-.social-logo {
-    height: 27px;
-    width: fit-content;
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to top right, #37BBED, #185D76) ;
+    padding: 1em;
 }
 
 button {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 0 1em 0 1em;
 }
 
-.spacer {
-    height: 100px
+#container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 25px;
+    padding: 0 1em 0 1em;
 }

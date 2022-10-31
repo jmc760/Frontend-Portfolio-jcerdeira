@@ -1,0 +1,40 @@
+<section>
+    <p id="headline">Proyectos</p>
+    <div class="container">
+        <div *ngFor="let Proyecto of proy">
+            <div class="item">
+                <!-- Nombre -->
+                <div>
+                    <p id="nombre">{{Proyecto.nombreP}}</p>
+                </div>
+                <!-- Año -->
+                <div>
+                    <p id="anio">{{Proyecto.anioP}}</p>
+                </div>
+                <!-- Imagen -->
+                <div>
+                    <img src={{Proyecto.imgP}}>
+                </div>
+                <!-- Descripción -->
+                <div>
+                    <p id="descripcion">{{Proyecto.descripcionP}}</p>
+                </div>
+                <!-- Botones -->
+                <div>
+                    <button mat-icon-button color="accent" *ngIf="isLogged" routerLink="/editproy/{{Proyecto.id}}">
+                        <mat-icon matTooltip="Editar" matTooltipPosition="below">create</mat-icon>
+                    </button>
+                    <button mat-icon-button color="accent" *ngIf="isLogged" (click)="delete(Proyecto.id)">
+                        <mat-icon matTooltip="Borrar" matTooltipPosition="below">delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Agregar -->
+    <div>
+        <button mat-fab color="accent" type="button" class="add-button" routerLink="/nuevoproy" *ngIf="isLogged">
+            <mat-icon matTooltip="Agregar Proyecto" matTooltipPosition="below">add</mat-icon>
+        </button>
+    </div>
+</section>

@@ -1,4 +1,4 @@
-export class JwtDto {
+export class JwtDTO {
     token!: string;
     type!: string;
     nombreUsuario!: string;

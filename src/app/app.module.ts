@@ -3,44 +3,56 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
-import { PersonaComponent } from './componentes/persona/persona.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
-import { ItemEducacionComponent } from './componentes/item-educacion/item-educacion.component';
-import { ItemExperienciaComponent } from './componentes/item-experiencia/item-experiencia.component';
-import { SkillsComponent } from './componentes/skills/skills.component';
-import { ItemSkillsComponent } from './componentes/item-skills/item-skills.component';
-import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { ItemProyectosComponent } from './componentes/item-proyectos/item-proyectos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './componentes/nav/nav.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { InterceptorService } from './service/interceptor-service';
 import { FormsModule } from "@angular/forms";
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { PersonaComponent } from './componentes/persona/persona.component';
+import { EditPersonaComponent } from './componentes/persona/edit-persona.component';
+import { NewPersonaComponent } from './componentes/persona/new-persona.component';
+import { SkillComponent } from './componentes/skill/skill.component';
+import { EditSkillComponent } from './componentes/skill/edit-skill.component';
+import { NewSkillComponent } from './componentes/skill/new-skill.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
+import { NewProyectoComponent } from './componentes/proyecto/new-proyecto.component';
+import { EditProyectoComponent } from './componentes/proyecto/edit-proyecto.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EncabezadoComponent,
-    AcercaDeComponent,
-    PersonaComponent,
     ExperienciaComponent,
     EducacionComponent,
-    ItemEducacionComponent,
-    ItemExperienciaComponent,
-    SkillsComponent,
-    ItemSkillsComponent,
-    ProyectosComponent,
-    ItemProyectosComponent,
     NavComponent,
     HomeComponent,
     LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    PersonaComponent,
+    EditPersonaComponent,
+    NewPersonaComponent,
+    SkillComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    ProyectoComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +60,9 @@ import { FormsModule } from "@angular/forms";
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [InterceptorService],
   bootstrap: [AppComponent]

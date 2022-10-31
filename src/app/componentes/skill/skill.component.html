@@ -1,0 +1,37 @@
+<section>
+    <p id="headline">Hard & Soft Skills</p>
+    <div class="container">
+        <div *ngFor="let Skill of skill">
+            <div class="item">
+                <!-- Imagen -->
+                <div>
+                    <img src="{{Skill.imgS}}" width="50px">
+                </div>
+                <!-- Nombre -->
+                <div>
+                    <p id="nombre">{{Skill.nombreS}}</p>
+                </div>
+                <!-- Spinner -->
+                <div>
+                    <mat-progress-spinner value="{{Skill.porcentajeS}}" diameter="25"></mat-progress-spinner>
+                    <p id="porcentaje">{{Skill.porcentajeS}}%</p>
+                </div>
+                <!-- Botones -->
+                <div>
+                    <button mat-icon-button color="accent" *ngIf="isLogged" routerLink="/editskill/{{Skill.id}}">
+                        <mat-icon matTooltip="Editar" matTooltipPosition="below">create</mat-icon>
+                    </button>
+                    <button mat-icon-button color="accent" *ngIf="isLogged" (click)="delete(Skill.id)">
+                        <mat-icon matTooltip="Borrar" matTooltipPosition="below">delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Agregar Skill -->
+    <div>
+        <button mat-fab color="accent" type="button" class="add-button" routerLink="/nuevaskill" *ngIf="isLogged">
+            <mat-icon matTooltip="Agregar Skill" matTooltipPosition="below">add</mat-icon>
+        </button>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+section {
+    background-image: linear-gradient(to top right, #37BBED, #185D76) ;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    width: fit-content;
+    padding: 2em;
+    border-radius: 2em;
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.5));
+}
+
+.custom-file-upload {
+    /*border-bottom: 1px solid #ccc;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+    width: fit-content;
+}
+
+input[type="file"] {
+    display: inline;
+    margin-bottom: 1.5em;
+    margin-top: 0.75em;
+}

@@ -1,35 +1,25 @@
-<form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-    <div class="center">
-        <div class="form">
-
-            <h2>Iniciar Sesión</h2>
-
-            <mat-form-field appearance="fill">
-                <mat-label>Nombre Usuario</mat-label>
-                <input type="text" id="nombreUsuario" name="nombreUsuario" 
-                class="form-control form-control-lg" [(ngModel)]="nombreUsuario" required matInput>
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-                <mat-label type="text">Contraseña</mat-label>
-                <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password"
-                required matInput>
-            </mat-form-field>
-
-            <button mat-stroked-button type="submit">Enviar</button>
-
-        </div>
-    </div>
-</form>
-
-<!--
 <section>
-    <div>
-        <h2>Iniciar Sesión</h2>
-        <form>
-            <p><label>Nombre de Usuario:</label><input type="text"></p>
-            <p><label>Constraseña:</label><input type="text"></p>
-        </form>
-    </div>
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="center">
+            <div class="form">
+
+                <h2>Iniciar Sesión</h2>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre Usuario</mat-label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg"
+                        [(ngModel)]="nombreUsuario" required matInput>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label type="text">Contraseña</mat-label>
+                    <input type="password" id="password" name="password" class="form-control form-control-lg"
+                        [(ngModel)]="password" required matInput>
+                </mat-form-field>
+
+                <button mat-stroked-button type="submit">Enviar</button>
+
+            </div>
+        </div>
+    </form>
 </section>
--->

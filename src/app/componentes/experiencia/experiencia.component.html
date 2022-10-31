@@ -1,4 +1,37 @@
 <section>
-    <h2>Experiencia</h2>
-    <app-item-experiencia></app-item-experiencia>
+    <p id="headline">Experiencia</p>
+    <div>
+        <div *ngFor="let Experiencia of expe">
+            <div class="row">
+                <!-- Imagen -->
+                <div class="item">
+                    <img src="{{Experiencia.imgE}}" width="50px">
+                </div>
+                <!-- Nombre-->
+                <div class="item">
+                    <p class="empresa">{{Experiencia.nombreE}}</p>
+                </div>
+                <!-- Descripción -->
+                <div class="item">
+                    <p>{{Experiencia.descripcionE}}</p>
+                </div>
+                <!-- Botones -->
+                <div class="item">
+                    <button mat-stroked-button color="accent" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}">
+                        <mat-icon matTooltip="Editar" matTooltipPosition="below">create</mat-icon>
+                    </button>
+                    <button mat-stroked-button color="accent" *ngIf="isLogged" (click)="delete(Experiencia.id)">
+                        <mat-icon matTooltip="Borrar" matTooltipPosition="below">delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Agregar Experiencia -->
+        <div>
+            <button mat-fab color="accent" type="button" class="add-button" routerLink="/nuevaexp"
+                *ngIf="isLogged">
+                <mat-icon matTooltip="Agregar Experiencia" matTooltipPosition="below">add</mat-icon>
+            </button>
+        </div>
+    </div>
 </section>

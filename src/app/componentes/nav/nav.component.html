@@ -1,25 +1,20 @@
-<nav>
-    <mat-toolbar>
-
-        <!--Logo Argentina Programa-->
-        <img class="ap-logo" src="../../../assets/ap-logo.png">
-
-        <!--Espaciador-->
-        <span></span>
-
-        <!--Botones redes sociales-->
-        <a href="https://github.com/jmc760">
-            <img class="social-logo" src="../../../assets/github-logo.png" alt="Github logo">
-        </a>
-        <a href="https://ar.linkedin.com/in/juan-manuel-cerdeira-7a11ab214">
-            <img class="social-logo" src="../../../assets/linkedin-logo-black.png" alt="Linkedin logo">
-        </a>
-
-        <!--Botón Login-->
-        <button mat-raised-button color="accent" (click)="login()" *ngIf="!isLogged">Iniciar Sesión</button>
-
-        <!--Botón Logout-->
-        <button mat-raised-button color="accent" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button>
-
-    </mat-toolbar>
-</nav>
+<span>
+    <!-- Logo Argentina Programa -->
+    <img id="logo" src="../../../assets/ap-logo.png">
+    <div id="container">
+    <!-- Github -->
+    <a href="https://github.com/jmc760">
+        <img id="logo" src="../../../assets/github-logo.png" alt="Github logo">
+    </a>
+    <!-- Linkedin -->
+    <a href="https://ar.linkedin.com/in/juan-manuel-cerdeira-7a11ab214">
+        <img id="logo" src="../../../assets/linkedin-logo-black.png" alt="Linkedin logo">
+    </a>
+    <!-- Login -->
+    <button mat-flat-button color="accent" (click)="login()" *ngIf="!isLogged" matTooltip="Iniciar Sesión"
+        matTooltipPosition="below">Login</button>
+    <!-- Logout -->
+    <button mat-flat-button color="accent" (click)="onLogOut()" *ngIf="isLogged" matTooltip="Cerrar Sesión"
+        matTooltipPosition="below">Logout</button>
+    </div>
+</span>

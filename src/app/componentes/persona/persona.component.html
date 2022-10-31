@@ -1,5 +1,53 @@
-<section>
-    <h1><strong>Juan Manuel Cerdeira</strong></h1>
-    <h2>Full Stack Developer Jr.</h2>
-    <h3>Buenos Aires (Argentina)</h3>
-</section>
+<div *ngFor="let Persona of pers">
+    <div *ngIf="Persona">
+        <!-- Banner -->
+        <header id="container" role="banner">
+            <div id="banner"></div>
+            <!-- Foto de Perfil -->
+            <div id="overLay">
+                <img id="foto-perfil" width="150px" src={{Persona.imgP}}>
+            </div>
+        </header>
+        <div id="divider"></div>
+        <section>
+            <div id="row">
+                <!-- Nombre -->
+                <p id="name">{{Persona.nombreP}}</p>
+                <!-- Editar -->
+                <div>
+                    <button mat-stroked-button color="accent" *ngIf="isLogged" routerLink="/editper/{{Persona.id}}">
+                        <mat-icon matTooltip="Editar Persona" matTooltipPosition="below">create</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <!-- Puesto -->
+            <div class="icon-container">
+                <img id="icon" src="../../../assets/puesto.png" alt="puesto">
+                <p>{{Persona.puestoP}}</p>
+            </div>
+            <!-- Ubicación -->
+            <div class="icon-container">
+                <img id="icon" src="../../../assets/bandera.png" alt="bandera">
+                <p>{{Persona.ubicacionP}}</p>
+            </div>
+            <!-- Descripción -->
+            <div id="about-container">
+                <p id="about">Acerca de mí</p>
+                <p>{{Persona.descripcionP}}</p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!--Botón Agregar Persona
+    <div class=" agregar">
+            <button class="boton-agregar" mat-stroked-button color="accent" type="button" routerLink="/nuevaper"
+                *ngIf="isLogged">
+                <mat-icon>add_circle</mat-icon> Agregar Persona
+            </button>
+    </div>-->
+
+<!-- Botón Eliminar Persona
+        <button mat-stroked-button color="accent" *ngIf="isLogged" (click)="delete(Persona.id)">
+            <mat-icon>delete</mat-icon>
+        </button>-->

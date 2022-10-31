@@ -1,0 +1,62 @@
+section {
+    width: fit-content;
+    margin: 2em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 2em;
+}
+
+#headline {
+    font-size: x-large;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#nombre {
+    font-size: larger;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#anio {
+    font-size: large;
+    font-weight: 900;
+    font-style: italic;
+    color: #3F51B5;
+}
+
+#descripcion {
+    font-size: small;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 2em;
+    margin-bottom: 2em;
+    background-image: linear-gradient(aliceblue, #dbf5ff);
+}
+
+.add-button {
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
